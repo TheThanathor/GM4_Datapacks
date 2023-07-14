@@ -6,6 +6,7 @@ scoreboard objectives add gm4_horse_level dummy
 scoreboard objectives add gm4_horse_speed_step dummy
 scoreboard objectives add gm4_horse_jump_step dummy
 scoreboard objectives add gm4_horse_stamina dummy
+scoreboard objectives add gm4_horse_stamina_cap dummy
 scoreboard objectives add gm4_horse_experience dummy
 
 scoreboard objectives add gm4_horse_need.social dummy
