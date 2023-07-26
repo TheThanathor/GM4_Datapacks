@@ -16,8 +16,25 @@ execute store result storage gm4_horse:temp Attributes[{Name:"minecraft:horse.ju
 
 # | Scores
 scoreboard players add @s gm4_horse_level 1
-scoreboard players add @s gm4_horse_stamina_cap 15
+scoreboard players operation @s gm4_horse_need.stamina_cap += $need_cap.stamina_step gm4_horse_data
+scoreboard players operation @s gm4_horse_need.stamina += $need_cap.stamina_step gm4_horse_data
 scoreboard players set @s gm4_horse_experience 0
+
+# set new needed experience
+execute if score @s gm4_horse_level matches 1 run scoreboard players set @s gm4_horse_experience 75
+execute if score @s gm4_horse_level matches 2 run scoreboard players set @s gm4_horse_experience 100
+execute if score @s gm4_horse_level matches 3 run scoreboard players set @s gm4_horse_experience 150
+execute if score @s gm4_horse_level matches 4 run scoreboard players set @s gm4_horse_experience 225
+execute if score @s gm4_horse_level matches 5 run scoreboard players set @s gm4_horse_experience 325
+execute if score @s gm4_horse_level matches 6 run scoreboard players set @s gm4_horse_experience 450
+execute if score @s gm4_horse_level matches 7 run scoreboard players set @s gm4_horse_experience 600
+execute if score @s gm4_horse_level matches 8 run scoreboard players set @s gm4_horse_experience 825
+execute if score @s gm4_horse_level matches 9 run scoreboard players set @s gm4_horse_experience 1125
+execute if score @s gm4_horse_level matches 10 run scoreboard players set @s gm4_horse_experience 1500
+execute if score @s gm4_horse_level matches 11 run scoreboard players set @s gm4_horse_experience 2100
+execute if score @s gm4_horse_level matches 12 run scoreboard players set @s gm4_horse_experience 3000
+execute if score @s gm4_horse_level matches 13 run scoreboard players set @s gm4_horse_experience 4500
+execute if score @s gm4_horse_level matches 14 run scoreboard players set @s gm4_horse_experience 7875
 
 # modify attributes from storage
 attribute @s generic.max_health modifier remove ff41dfbd-0833-4a74-be0d-dc91f70b16e7
@@ -29,3 +46,4 @@ data remove storage gm4_horse:temp Attributes
 # vfx
 particle happy_villager ~ ~1 ~ 1 1 1 0 16
 playsound entity.player.levelup neutral @a ~ ~1 ~ 0.7 1.6
+effect give @s minecraft:regeneration 3 1

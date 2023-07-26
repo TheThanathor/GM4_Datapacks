@@ -1,24 +1,35 @@
 {
     "criteria": {
-        "requirement": {
-            "trigger": "minecraft:started_riding",
-            "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "vehicle": {
-                                "type": "#gm4_horsemanship:horse",
-                                "nbt": "{Tags:[\"gm4_horse\"]}"
-                            }
-                        }
-                    }
-                ]
+      "requirement": {
+        "trigger": "minecraft:started_riding",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"gm4_player_portal\"]}"
+                }
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "vehicle": {
+                  "type": "#gm4_horsemanship:horse",
+                  "nbt": "{Tags:[\"gm4_horse\"]}"
+                }
+              }
             }
+          ]
         }
+      }
     },
     "rewards": {
-        "function": "gm4_horsemanship:start_riding_horse"
+      "function": "gm4_horsemanship:start_riding_horse"
     }
-}
+  }
+  

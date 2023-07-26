@@ -46,13 +46,13 @@ scoreboard players operation @s gm4_horse_jump_step -= $jump.start gm4_horse_dat
 scoreboard players operation @s gm4_horse_jump_step /= #15 gm4_horse_data
 
 # | Scores
-scoreboard players set @s gm4_horse_stamina 225
-scoreboard players set @s gm4_horse_stamina_cap 225
+scoreboard players set @s gm4_horse_need.stamina 75
+scoreboard players set @s gm4_horse_need.stamina_cap 75
 scoreboard players set @s gm4_horse_level 0
-scoreboard players set @s gm4_horse_experience 0
-scoreboard players set @s gm4_horse_need.social 0
-scoreboard players set @s gm4_horse_need.graze 0
-scoreboard players set @s gm4_horse_need.care 0
+scoreboard players set @s gm4_horse_experience 60
+scoreboard players operation @s gm4_horse_need.social = $need_cap.social gm4_horse_data
+scoreboard players operation @s gm4_horse_need.graze = $need_cap.graze gm4_horse_data
+scoreboard players operation @s gm4_horse_need.care = $need_cap.care gm4_horse_data
 
 # modify attributes from storage
 attribute @s generic.movement_speed modifier remove 3a1ea8aa-6798-46e0-bd66-76def508f9f3
