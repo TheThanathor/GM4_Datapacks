@@ -3,9 +3,16 @@
       "requirement": {
         "trigger": "minecraft:player_interacted_with_entity",
         "conditions": {
+          "player": [],
           "item": {
             "items": [
-              "minecraft:brush"
+              "minecraft:apple",
+              "minecraft:golden_apple",
+              "minecraft:enchanted_golden_apple",
+              "minecraft:golden_carrot",
+              "minecraft:sugar",
+              "minecraft:wheat",
+              "minecraft:hay_block"
             ]
           },
           "entity": [
@@ -13,7 +20,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type": "minecraft:horse",
+                "type": "#gm4_horsemanship:horse",
                 "nbt": "{Tags:[\"gm4_horse\"]}"
               }
             }
@@ -22,7 +29,7 @@
       }
     },
     "rewards": {
-      "function": "gm4_horsemanship:need/care/brush"
+      "function": "gm4_horsemanship:need/food/feed_original_food"
     }
   }
   

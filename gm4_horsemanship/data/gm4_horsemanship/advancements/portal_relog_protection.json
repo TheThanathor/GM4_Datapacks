@@ -1,0 +1,33 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:tick",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"gm4_horse_portal.rider\"]}"
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "gm4_horse_portal_relog"
+              },
+              "range": {
+                "min": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "gm4_horsemanship:riding/portal/rider_relog_protection"
+    }
+  }
+  

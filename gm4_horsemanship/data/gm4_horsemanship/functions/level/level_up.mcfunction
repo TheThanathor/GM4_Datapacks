@@ -1,3 +1,7 @@
+# apply level-up to gm4_horse
+# @s = gm4_horse
+# at @s
+# run from horse_submain
 
 # store attributes in storage for modification
 data modify storage gm4_horse:temp Attributes set from entity @s Attributes
@@ -21,20 +25,20 @@ scoreboard players operation @s gm4_horse_need.stamina += $need_cap.stamina_step
 scoreboard players set @s gm4_horse_experience 0
 
 # set new needed experience
-execute if score @s gm4_horse_level matches 1 run scoreboard players set @s gm4_horse_experience 75
-execute if score @s gm4_horse_level matches 2 run scoreboard players set @s gm4_horse_experience 100
-execute if score @s gm4_horse_level matches 3 run scoreboard players set @s gm4_horse_experience 150
-execute if score @s gm4_horse_level matches 4 run scoreboard players set @s gm4_horse_experience 225
-execute if score @s gm4_horse_level matches 5 run scoreboard players set @s gm4_horse_experience 325
-execute if score @s gm4_horse_level matches 6 run scoreboard players set @s gm4_horse_experience 450
-execute if score @s gm4_horse_level matches 7 run scoreboard players set @s gm4_horse_experience 600
-execute if score @s gm4_horse_level matches 8 run scoreboard players set @s gm4_horse_experience 825
-execute if score @s gm4_horse_level matches 9 run scoreboard players set @s gm4_horse_experience 1125
-execute if score @s gm4_horse_level matches 10 run scoreboard players set @s gm4_horse_experience 1500
-execute if score @s gm4_horse_level matches 11 run scoreboard players set @s gm4_horse_experience 2100
-execute if score @s gm4_horse_level matches 12 run scoreboard players set @s gm4_horse_experience 3000
-execute if score @s gm4_horse_level matches 13 run scoreboard players set @s gm4_horse_experience 4500
-execute if score @s gm4_horse_level matches 14 run scoreboard players set @s gm4_horse_experience 7875
+execute if score @s gm4_horse_level matches 1 run scoreboard players set @s gm4_horse_experience 15
+execute if score @s gm4_horse_level matches 2 run scoreboard players set @s gm4_horse_experience 20
+execute if score @s gm4_horse_level matches 3 run scoreboard players set @s gm4_horse_experience 30
+execute if score @s gm4_horse_level matches 4 run scoreboard players set @s gm4_horse_experience 45
+execute if score @s gm4_horse_level matches 5 run scoreboard players set @s gm4_horse_experience 65
+execute if score @s gm4_horse_level matches 6 run scoreboard players set @s gm4_horse_experience 90
+execute if score @s gm4_horse_level matches 7 run scoreboard players set @s gm4_horse_experience 120
+execute if score @s gm4_horse_level matches 8 run scoreboard players set @s gm4_horse_experience 165
+execute if score @s gm4_horse_level matches 9 run scoreboard players set @s gm4_horse_experience 225
+execute if score @s gm4_horse_level matches 10 run scoreboard players set @s gm4_horse_experience 300
+execute if score @s gm4_horse_level matches 11 run scoreboard players set @s gm4_horse_experience 420
+execute if score @s gm4_horse_level matches 12 run scoreboard players set @s gm4_horse_experience 600
+execute if score @s gm4_horse_level matches 13 run scoreboard players set @s gm4_horse_experience 900
+execute if score @s gm4_horse_level matches 14 run scoreboard players set @s gm4_horse_experience 1350
 
 # modify attributes from storage
 attribute @s generic.max_health modifier remove ff41dfbd-0833-4a74-be0d-dc91f70b16e7
