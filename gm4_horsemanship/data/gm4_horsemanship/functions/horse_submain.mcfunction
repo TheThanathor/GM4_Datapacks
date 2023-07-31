@@ -15,6 +15,11 @@ scoreboard players remove $max_health gm4_horse_data 101
 execute store result score $curr_health gm4_horse_data run data get entity @s Health 100
 execute if score $curr_health gm4_horse_data > $max_health gm4_horse_data store result entity @s Health float 0.01 run scoreboard players get $max_health gm4_horse_data
 
+# | Other data
+# InLove is set to not show hearts when feeding
+# Age is set to not allow breeding to happen
+data merge entity @s {InLove:200,Age:200}
+
 # | Need: Grazing
 execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[scores={gm4_horse_need.graze=2..}] gm4_horse_need.graze 2
 scoreboard players remove @s[scores={gm4_horse_need.graze=1..}] gm4_horse_need.graze 1

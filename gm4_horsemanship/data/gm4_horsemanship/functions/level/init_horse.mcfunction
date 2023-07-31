@@ -7,7 +7,7 @@ tag @s add gm4_horse
 
 # add required attributes
 attribute @s generic.max_health modifier add ff41dfbd-0833-4a74-be0d-dc91f70b16e7 "gm4_horse.health" 10 add
-attribute @s generic.max_health modifier add 5c1c6762-ba91-42b1-b278-dfce16d9fa4b "gm4_horse.fake_health" 1.1 add
+attribute @s generic.max_health modifier add 5c1c6762-ba91-42b1-b278-dfce16d9fa4b "gm4_horse.fake_health" 1.01 add
 attribute @s generic.movement_speed modifier add 3a1ea8aa-6798-46e0-bd66-76def508f9f3 "gm4_horse.speed" 0 add
 attribute @s horse.jump_strength modifier add 4c7ad001-d21b-4f95-8cc8-d5ca8ae37796 "gm4_horse.jump" 0 add
 attribute @s generic.max_health modifier add bdfdceca-918f-4766-b3ce-be87c6897fe5 "gm4_horse.health.remove_base" 0 add
