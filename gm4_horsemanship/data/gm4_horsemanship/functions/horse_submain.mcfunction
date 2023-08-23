@@ -17,8 +17,10 @@ execute if score $curr_health gm4_horse_data > $max_health gm4_horse_data store 
 
 # | Other data
 # InLove is set to not show hearts when feeding
+data modify entity @s InLove set value 200
 # Age is set to not allow breeding to happen
-data merge entity @s {InLove:200,Age:200}
+data modify entity @s[tag=!gm4_horse.breeding] Age set value 200
+data modify entity @s[tag=gm4_horse.breeding] Age set value 0
 
 # | Need: Grazing
 execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[scores={gm4_horse_need.graze=2..}] gm4_horse_need.graze 2

@@ -11,7 +11,7 @@ tag @s remove gm4_horse.force_graze
 execute store result score $mobGriefing gm4_horse_data run gamerule mobGriefing
 execute if score $mobGriefing gm4_horse_data matches 1 unless block ~ ~ ~ grass run fill ~ ~ ~ ~ ~-1 ~ dirt replace grass_block
 execute if score $mobGriefing gm4_horse_data matches 1 if block ~ ~ ~ grass run fill ~ ~ ~ ~ ~ ~ air replace grass
-execute if score $mobGriefing gm4_horse_data matches 1 run playsound minecraft:block.grass.break block @a ~ ~ ~ 1 1
+playsound minecraft:block.grass.break block @a ~ ~ ~ 1 1
 particle block grass_block ~ ~ ~ 0.2 0.05 0.2 0 4
 
 # if this is a baby horse accelerate its growth by 10% (same effect as on sheep)
