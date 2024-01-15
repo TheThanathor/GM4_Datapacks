@@ -1,9 +1,12 @@
 id: gm4_double_doors
 name: Double Doors
-version: 1.0.0
+version: 1.0.X
 
 data_pack:
   load: .
+
+require:
+  - bolt
 
 pipeline:
   - gm4_double_doors.generate
@@ -22,6 +25,8 @@ meta:
     credits:
       Creator:
         - Bloo
+      Icon Design:
+        - venomousbirds
   modrinth:
     project_id: Vx4zJ1Np
   smithed:

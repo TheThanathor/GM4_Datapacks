@@ -4,6 +4,11 @@ version: 1.2.X
 
 data_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 26
+        max_inclusive: 26
+      directory: overlay_26
 
 pipeline:
   - gm4_auto_crafting.generate
@@ -45,3 +50,9 @@ meta:
         - BluePsychoRanger
       Icon Design:
         - Hozz
+  modrinth:
+    project_id: WkDoUESw
+  smithed:
+    pack_id: gm4_auto_crafting
+  planetminecraft:
+    uid: 6097435
