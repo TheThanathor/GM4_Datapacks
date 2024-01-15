@@ -6,7 +6,7 @@
 # check which item was fed
 item replace block 29999998 1 7134 container.0 from entity @s weapon.mainhand
 data modify storage gm4_horsemanship:temp item_id set from block 29999998 1 7134 Items[{Slot:0b}].id
-execute if data storage gm4_horsemanship:temp {item_id:"minecraft:grass"} run scoreboard players set $fed_item gm4_horse_data 1
+execute if data storage gm4_horsemanship:temp {item_id:"minecraft:short_grass"} run scoreboard players set $fed_item gm4_horse_data 1
 execute if data storage gm4_horsemanship:temp {item_id:"minecraft:carrot"} run scoreboard players set $fed_item gm4_horse_data 2
 execute if data storage gm4_horsemanship:temp {item_id:"minecraft:sweet_berries"} run scoreboard players set $fed_item gm4_horse_data 3
 execute if data storage gm4_horsemanship:temp {item_id:"minecraft:glow_berries"} run scoreboard players set $fed_item gm4_horse_data 4

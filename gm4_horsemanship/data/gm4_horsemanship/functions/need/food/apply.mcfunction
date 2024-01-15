@@ -6,7 +6,7 @@
 
 effect give @s glowing 1 0 true
 
-execute if score $fed_item gm4_horse_data matches 1 run say grass
+execute if score $fed_item gm4_horse_data matches 1 run say short_grass
 execute if score $fed_item gm4_horse_data matches 2 run say carrot
 execute if score $fed_item gm4_horse_data matches 3 run say sweet_berries
 execute if score $fed_item gm4_horse_data matches 4 run say glow_berries

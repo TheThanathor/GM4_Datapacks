@@ -8,19 +8,14 @@ scoreboard players set $mounted gm4_horse_data 0
 scoreboard players set $riding gm4_horse_data 0
 execute store success score $mounted gm4_horse_data on controller if entity @s[type=player]
 execute if score $mounted gm4_horse_data matches 1 on controller if score @s gm4_horse_riding matches 1.. run scoreboard players add $riding gm4_horse_data 1
+execute store success score $saddled gm4_horse_data if data entity @s SaddleItem{id:"minecraft:saddle"}
+execute store success score $on_leash gm4_horse_data if data entity @s Leash.UUID
 
 # | Health Status
 execute store result score $max_health gm4_horse_data run attribute @s generic.max_health get 100
 scoreboard players remove $max_health gm4_horse_data 101
 execute store result score $curr_health gm4_horse_data run data get entity @s Health 100
 execute if score $curr_health gm4_horse_data > $max_health gm4_horse_data store result entity @s Health float 0.01 run scoreboard players get $max_health gm4_horse_data
-
-# | Other data
-# InLove is set to not show hearts when feeding
-data modify entity @s InLove set value 200
-# Age is set to not allow breeding to happen
-data modify entity @s[tag=!gm4_horse.breeding] Age set value 200
-data modify entity @s[tag=gm4_horse.breeding] Age set value 0
 
 # | Need: Grazing
 execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[scores={gm4_horse_need.graze=2..}] gm4_horse_need.graze 2
@@ -31,6 +26,11 @@ execute if score $riding gm4_horse_data matches 1 if entity @s[nbt={EatingHaysta
 execute if score @s gm4_horse_need.graze matches ..0 run function gm4_horsemanship:riding/stamina/tired 
 
 # | Need: Social
+# goes down if left alone
+
+# goes up when near other horses and unsaddled
+
+# goes up when being walked on a leash
 
 # | Need: Care
 # brushing
@@ -44,6 +44,7 @@ execute if score $riding gm4_horse_data matches 1 run scoreboard players remove 
 # | Need: Stamina
 execute if score $mounted gm4_horse_data matches 0 run scoreboard players add @s gm4_horse_need.stamina 3
 execute if score $mounted gm4_horse_data matches 0 run scoreboard players operation @s gm4_horse_need.stamina += @s gm4_horse_level
+execute if score $mounted gm4_horse_data matches 0 if score $saddled gm4_horse_data matches 0 run scoreboard players operation @s gm4_horse_need.stamina += @s gm4_horse_level
 execute if score $mounted gm4_horse_data matches 1 if score $riding gm4_horse_data matches 0 run scoreboard players add @s gm4_horse_need.stamina 1
 scoreboard players operation @s gm4_horse_need.stamina < @s gm4_horse_need.stamina_cap
 execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[scores={gm4_horse_need.stamina=1..}] gm4_horse_need.stamina 1

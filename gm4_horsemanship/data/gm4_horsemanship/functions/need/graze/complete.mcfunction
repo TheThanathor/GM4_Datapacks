@@ -9,8 +9,8 @@ tag @s remove gm4_horse.force_graze
 # break grass (block) if mobGriefing is enabled
 # horses can only eat grass or grass blocks but not flowers or tall grass, similar to sheep
 execute store result score $mobGriefing gm4_horse_data run gamerule mobGriefing
-execute if score $mobGriefing gm4_horse_data matches 1 unless block ~ ~ ~ grass run fill ~ ~ ~ ~ ~-1 ~ dirt replace grass_block
-execute if score $mobGriefing gm4_horse_data matches 1 if block ~ ~ ~ grass run fill ~ ~ ~ ~ ~ ~ air replace grass
+execute if score $mobGriefing gm4_horse_data matches 1 unless block ~ ~ ~ short_grass run fill ~ ~ ~ ~ ~-1 ~ dirt replace grass_block
+execute if score $mobGriefing gm4_horse_data matches 1 if block ~ ~ ~ short_grass run fill ~ ~ ~ ~ ~ ~ air replace short_grass
 playsound minecraft:block.grass.break block @a ~ ~ ~ 1 1
 particle block grass_block ~ ~ ~ 0.2 0.05 0.2 0 4
 
