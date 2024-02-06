@@ -1,7 +1,7 @@
 # mark horse as tired if its needs are not met
 # @s = gm4_horse
 # at @s
-# run from horse_submain
+# run from horse_processsing/general
 
 attribute @s generic.movement_speed modifier add 08b879db-9dbc-4325-9446-1a9b5f0676a0 "gm4_horse.speed.tired" -0.9 multiply
 attribute @s horse.jump_strength modifier add f2d13d68-5b1f-4634-9ec6-c2098e3cc17f "gm4_horse.jump.tired" -1 multiply

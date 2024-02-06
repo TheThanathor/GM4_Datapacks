@@ -1,7 +1,7 @@
 # move this horse through the nether portal
 # @s = gm4_horse
 # at @s
-# run from horse_submain
+# run from horse_processsing/general
 
 # set horse and riders score to an id
 execute store result score @s gm4_horse_portal run scoreboard players remove $curr_portal_id gm4_horse_portal 1

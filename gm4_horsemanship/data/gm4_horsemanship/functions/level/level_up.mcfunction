@@ -1,7 +1,7 @@
 # apply level-up to gm4_horse
 # @s = gm4_horse
 # at @s
-# run from horse_submain
+# run from horse_processsing/general
 
 # store attributes in storage for modification
 data modify storage gm4_horse:temp Attributes set from entity @s Attributes
