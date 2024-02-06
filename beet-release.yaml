@@ -9,14 +9,16 @@ pipeline:
     require:
       - gm4.plugins.output.release
       - gm4.plugins.player_heads
+      - gm4_guidebook.generate_guidebooks.load_page_data
+      - gm4_guidebook.generate_guidebooks.load_custom_recipes
     pipeline:
+      - gm4.plugins.test.strip_tests
       - gm4.plugins.manifest.write_updates
       - gm4.plugins.manifest.write_credits
       - require: [beet.contrib.copy_files]
         meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
       - gm4.plugins.readme_generator
       - gm4.plugins.write_mcmeta
-      - gm4.plugins.output.release
     meta:
       mecha:
         formatting:
