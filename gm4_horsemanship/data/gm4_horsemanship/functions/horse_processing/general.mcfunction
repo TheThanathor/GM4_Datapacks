@@ -11,7 +11,7 @@ execute store result score $curr_health gm4_horse_data run data get entity @s He
 execute if score $curr_health gm4_horse_data > $max_health gm4_horse_data store result entity @s Health float 0.01 run scoreboard players get $max_health gm4_horse_data
 
 ## | Nether Portal
-execute if score @s gm4_horse_portal matches ..-1 if data entity @s {PortalCooldown:0} run function gm4_horsemanship:riding/portal/reset_horse
+execute if score @s gm4_horse_portal matches ..-1 unless block ~ ~ ~ nether_portal run function gm4_horsemanship:riding/portal/reset_horse
 execute unless score @s gm4_horse_portal matches ..-1 unless score @s gm4_horse_portal matches 6.. if block ~ ~ ~ nether_portal run scoreboard players add @s gm4_horse_portal 1
 execute if score @s gm4_horse_portal matches 1..6 unless block ~ ~ ~ nether_portal run scoreboard players reset @s gm4_horse_portal
 execute if score @s gm4_horse_portal matches 1..6 on controller run effect give @s nausea 4 0 true

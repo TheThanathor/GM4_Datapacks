@@ -3,5 +3,6 @@
 # at @s
 # run from horse_processsing/general
 
+data modify entity @s PortalCooldown set value 0
 scoreboard players reset @s gm4_horse_portal
 tag @s remove gm4_horse_portal
