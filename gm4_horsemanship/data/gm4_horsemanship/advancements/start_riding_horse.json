@@ -29,6 +29,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_horsemanship:start_riding_horse"
+    "function": "gm4_horsemanship:horse_processing/start_riding_horse"
   }
 }
