@@ -18,7 +18,7 @@ execute as @e[dx=0,type=glow_squid,tag=!smithed.entity] run function gm4_standar
 
 #experience orb
 execute positioned ~0.5 ~ ~0.5 if entity @e[distance=..0.5,type=experience_orb] if score @s[tag=gm4_lt_empty] gm4_lt_value matches 0 at @s run function gm4_standard_liquids:liquid_init/experience
-execute positioned ~0.5 ~ ~0.5 if score @s[tag=gm4_lt_experience] gm4_lt_value matches ..1394 as @e[distance=..0.5,type=experience_orb] run function gm4_standard_liquids:util/experience_orb
+execute positioned ~0.5 ~ ~0.5 if score @s[tag=gm4_lt_experience] gm4_lt_value matches ..30969 as @e[distance=..0.5,type=experience_orb] run function gm4_standard_liquids:util/experience_orb
 
 #player depositing experience
 execute if score $schedule_deposit_exp gm4_lt_util matches 2.. run schedule clear gm4_standard_liquids:util/scheduled_deposit_exp
