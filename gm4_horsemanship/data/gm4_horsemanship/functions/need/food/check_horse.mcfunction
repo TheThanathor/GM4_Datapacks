@@ -1,5 +1,5 @@
 # check if this gm4_horse was fed by checking if player is looking at it
-# @s = player feeding the gm4_horse
+# @s = gm4_horse
 # at @s
 # run from need/food/feed_added_food
 
