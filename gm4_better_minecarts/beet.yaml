@@ -1,0 +1,23 @@
+id: gm4_better_minecarts
+name: Better Minecarts
+version: 1.0.X
+
+data_pack:
+  load: .
+
+resource_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [tick]
+    website:
+      description: Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!
+    wiki: https://wiki.gm4.co/wiki/Better_Minecarts
+    credits:
+      Creator:
+        - Thanathor
