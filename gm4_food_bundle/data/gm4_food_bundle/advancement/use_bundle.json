@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "speed": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "bundle"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_food_bundle:test"
+  }
+}
