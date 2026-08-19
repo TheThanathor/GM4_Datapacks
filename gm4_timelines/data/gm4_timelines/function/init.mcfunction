@@ -15,4 +15,7 @@ function gm4_timelines:register/days
 
 schedule function gm4_timelines:main 1t
 
+# TODO: remove this in the final version
+function gm4_timelines:dev/reset
+
 #$moduleUpdateList
