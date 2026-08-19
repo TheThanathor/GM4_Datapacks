@@ -5,7 +5,7 @@
 # run from coral_vine/flower/discharge
 
 # vfx
-particle block mangrove_roots ~ ~ ~ 0.35 0.35 0.35 0.1 8
+particle block{block_state:"mangrove_roots"} ~ ~ ~ 0.35 0.35 0.35 0.1 8
 playsound block.mangrove_roots.break block @a ~ ~ ~ 0.6 0.8
 
 # set block to dead coral vine

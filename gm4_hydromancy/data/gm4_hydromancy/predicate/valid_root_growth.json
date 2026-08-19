@@ -4,7 +4,7 @@
         "offsetY": -1,
         "predicate": {
             "block": {
-                "tag": "gm4:full_collision"
+              "blocks": "#gm4:full_collision"
             }
         }
     },

@@ -20,7 +20,7 @@
           "offsetY": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -30,7 +30,7 @@
           "offsetY": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -39,7 +39,7 @@
           "offsetY": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -49,7 +49,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -59,7 +59,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -69,7 +69,7 @@
           "offsetY": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -79,7 +79,7 @@
           "offsetY": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -89,7 +89,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -99,7 +99,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -108,7 +108,7 @@
           "offsetX": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -117,7 +117,7 @@
           "offsetX": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -126,7 +126,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -135,7 +135,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -145,7 +145,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -155,7 +155,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -165,7 +165,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         },
@@ -175,7 +175,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_hydromancy:coral_vine"
+              "blocks": "#gm4_hydromancy:coral_vine"
             }
           }
         }

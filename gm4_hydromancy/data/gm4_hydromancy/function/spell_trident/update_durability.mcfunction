@@ -3,7 +3,7 @@
 # at @s
 advancement revoke @s only gm4_hydromancy:spell_trident_dura
 
-execute store result score $durability gm4_hy_data run data get entity @s SelectedItem.tag.gm4_hy_spell_trident.dura
+execute store result score $durability gm4_hy_data run data get entity @s SelectedItem.components."minecraft:custom_data".gm4_hy_spell_trident.dura
 item modify entity @s weapon.mainhand gm4_hydromancy:update_durability
 
-execute if data entity @s SelectedItem.tag.Enchantments run item modify entity @s weapon.mainhand gm4_hydromancy:remove_enchants
+execute if data entity @s SelectedItem.components."minecraft:enchantments" run item modify entity @s weapon.mainhand gm4_hydromancy:remove_enchants

@@ -9,4 +9,4 @@ scoreboard players add @e[type=marker,tag=gm4_hy_coral_vine.alive,tag=gm4_hy_cor
 tag @s remove gm4_hy_charged_fish
 function gm4_hydromancy:fish/update_color
 
-particle block red_concrete ~ ~ ~ 0.15 0.15 0.15 0.05 5
+particle block{block_state:"red_concrete"} ~ ~ ~ 0.15 0.15 0.15 0.05 5

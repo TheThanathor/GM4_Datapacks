@@ -5,16 +5,17 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_hydromancy:spell_trident/base"
+                    "value": "gm4_hydromancy:spell_trident/base"
                 }
             ],
             "functions": [
                 {
-                    "function": "minecraft:set_nbt",
+                    "function": "minecraft:set_custom_data",
                     "tag": "{gm4_hy_spell_trident:{spell_id:1,dura:99,mana:{left:6000,max:6000}}}"
                 },
                 {
                     "function": "minecraft:set_lore",
+                    "mode": "replace_all",
                     "entity": "this",
                     "lore": [
                         {

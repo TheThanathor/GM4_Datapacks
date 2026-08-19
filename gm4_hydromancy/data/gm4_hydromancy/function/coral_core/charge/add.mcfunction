@@ -8,7 +8,7 @@ scoreboard players add @s gm4_hy_charge 1
 data modify entity @s[scores={gm4_hy_charge=20}] item.tag.Enchantments append value {id:"minecraft:mending",lvl:1s}
 
 # vfx
-particle block bubble_coral_block ~ ~-.3 ~ 0.25 0.1 0.25 0 18
+particle block{block_state:"bubble_coral_block"} ~ ~-.3 ~ 0.25 0.1 0.25 0 18
 playsound minecraft:block.conduit.activate block @a ~ ~ ~ 1 0.25
 
 # charge circle

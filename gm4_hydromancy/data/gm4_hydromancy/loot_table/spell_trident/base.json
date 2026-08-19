@@ -8,8 +8,10 @@
           "name": "minecraft:trident",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:3,Enchantments:[{}]}"
+              "function": "minecraft:set_components",
+              "components": {
+                "enchantment_glint_override": true
+              }
             },
             {
               "function": "minecraft:set_name",
@@ -24,10 +26,10 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
-                  "name": "gm4_hy_spell_trident_dam",
+                  "attribute": "attack_damage",
+                  "id": "gm4_hydromancy:spell_trident_dam",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 }
               ]

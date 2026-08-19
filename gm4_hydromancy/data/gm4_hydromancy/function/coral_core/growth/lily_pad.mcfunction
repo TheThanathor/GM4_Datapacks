@@ -4,14 +4,14 @@
 # run from coral_core/growth/raycast
 
 # mark possible growth locations
-execute if block ~1 ~ ~ #gm4:air if block ~1 ~-1 ~ #gm4:water run summon marker ~1 ~ ~ {Tags:["gm4_hy_possible_lily_pad"]}
-execute if block ~-1 ~ ~ #gm4:air if block ~-1 ~-1 ~ #gm4:water run summon marker ~-1 ~ ~ {Tags:["gm4_hy_possible_lily_pad"]}
-execute if block ~1 ~ ~1 #gm4:air if block ~1 ~-1 ~1 #gm4:water run summon marker ~1 ~ ~1 {Tags:["gm4_hy_possible_lily_pad"]}
-execute if block ~1 ~ ~-1 #gm4:air if block ~1 ~-1 ~-1 #gm4:water run summon marker ~1 ~ ~-1 {Tags:["gm4_hy_possible_lily_pad"]}
-execute if block ~-1 ~ ~1 #gm4:air if block ~-1 ~-1 ~1 #gm4:water run summon marker ~-1 ~ ~1 {Tags:["gm4_hy_possible_lily_pad"]}
-execute if block ~-1 ~ ~-1 #gm4:air if block ~-1 ~-1 ~-1 #gm4:water run summon marker ~-1 ~ ~-1 {Tags:["gm4_hy_possible_lily_pad"]}
-execute if block ~ ~ ~1 #gm4:air if block ~ ~-1 ~1 #gm4:water run summon marker ~ ~ ~1 {Tags:["gm4_hy_possible_lily_pad"]}
-execute if block ~ ~ ~-1 #gm4:air if block ~ ~-1 ~-1 #gm4:water run summon marker ~ ~ ~-1 {Tags:["gm4_hy_possible_lily_pad"]}
+execute if block ~1 ~ ~ #minecraft:air if block ~1 ~-1 ~ #gm4:water run summon marker ~1 ~ ~ {Tags:["gm4_hy_possible_lily_pad"]}
+execute if block ~-1 ~ ~ #minecraft:air if block ~-1 ~-1 ~ #gm4:water run summon marker ~-1 ~ ~ {Tags:["gm4_hy_possible_lily_pad"]}
+execute if block ~1 ~ ~1 #minecraft:air if block ~1 ~-1 ~1 #gm4:water run summon marker ~1 ~ ~1 {Tags:["gm4_hy_possible_lily_pad"]}
+execute if block ~1 ~ ~-1 #minecraft:air if block ~1 ~-1 ~-1 #gm4:water run summon marker ~1 ~ ~-1 {Tags:["gm4_hy_possible_lily_pad"]}
+execute if block ~-1 ~ ~1 #minecraft:air if block ~-1 ~-1 ~1 #gm4:water run summon marker ~-1 ~ ~1 {Tags:["gm4_hy_possible_lily_pad"]}
+execute if block ~-1 ~ ~-1 #minecraft:air if block ~-1 ~-1 ~-1 #gm4:water run summon marker ~-1 ~ ~-1 {Tags:["gm4_hy_possible_lily_pad"]}
+execute if block ~ ~ ~1 #minecraft:air if block ~ ~-1 ~1 #gm4:water run summon marker ~ ~ ~1 {Tags:["gm4_hy_possible_lily_pad"]}
+execute if block ~ ~ ~-1 #minecraft:air if block ~ ~-1 ~-1 #gm4:water run summon marker ~ ~ ~-1 {Tags:["gm4_hy_possible_lily_pad"]}
 
 # only stop raycast if growth is possible
 execute if entity @e[type=marker,tag=gm4_hy_possible_lily_pad] run scoreboard players set $raycast_limit gm4_hy_data 0

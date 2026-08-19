@@ -4,7 +4,7 @@
 # run from tick
 
 # vfx
-particle block mangrove_roots ~ ~ ~ 0.2 0.2 0.2 0.1 8
+particle block{block_state:"mangrove_roots"} ~ ~ ~ 0.2 0.2 0.2 0.1 8
 playsound block.mangrove_roots.break block @a ~ ~ ~ 1 0.7
 
 # delete item

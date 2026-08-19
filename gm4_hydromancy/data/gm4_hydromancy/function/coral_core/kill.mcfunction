@@ -8,7 +8,7 @@ execute store result storage gm4_hydromancy:temp stored_mana int 1 run scoreboar
 scoreboard players operation @s gm4_hy_charge *= #5 gm4_hy_data
 
 # spawn item
-loot spawn ~ ~ ~ loot gm4_hydromancy:mana_stone
+# loot spawn ~ ~ ~ loot gm4_hydromancy:mana_stone
 data remove storage gm4_hydromancy:temp stored_mana
 
 # vfx

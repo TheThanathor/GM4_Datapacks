@@ -1,4 +1,5 @@
 execute unless score hydromancy gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Hydromancy"}
+execute unless score hydromancy gm4_earliest_version < hydromancy gm4_modules run scoreboard players operation hydromancy gm4_earliest_version = hydromancy gm4_modules
 scoreboard players set hydromancy gm4_modules 1
 
 scoreboard objectives add gm4_hy_data dummy

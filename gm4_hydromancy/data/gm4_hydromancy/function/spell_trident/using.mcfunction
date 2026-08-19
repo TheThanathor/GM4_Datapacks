@@ -1,7 +1,7 @@
 # play vfx while charging a spell trident
 # @s = player charging the trident
 # at @s
-advancement revoke @s only gm4_hydromancy:using_spell_trident 
+advancement revoke @s only gm4_hydromancy:using_spell_trident
 
 tag @s add gm4_hy_using_spell_trident
 

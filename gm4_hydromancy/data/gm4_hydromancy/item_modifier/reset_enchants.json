@@ -1,5 +1,7 @@
 {
-    "function": "minecraft:set_nbt",
-    "tag": "{Enchantments:[{}]}"
+    "function": "minecraft:set_components",
+    "components": {
+      "enchantments": {}
+    }
   }
   

@@ -1,40 +1,34 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:item_used_on_block",
-        "conditions": {
-          "location": [
-            {
-              "condition": "minecraft:all_of",
-              "terms": [
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "block": {
-                      "tag": "gm4_hydromancy:chests",
-                      "state": {
-                        "waterlogged": true
-                      }
-                    }
-                  }
-                },
-                {
-                  "condition": "minecraft:location_check",
-                  "offsetY": 1,
-                  "predicate": {
-                    "block": {
-                      "tag": "gm4:water"
-                    }
-                  }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:default_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#gm4_hydromancy:chests",
+                "state": {
+                  "waterlogged": "true"
                 }
-              ]
+              }
             }
-          ]
-        }
+          },
+          {
+            "condition": "location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#gm4:water"
+              }
+            },
+            "offsetY": 1
+          }
+        ]
       }
-    },
-    "rewards": {
-      "function": "gm4_hydromancy:additions/water_chest/opened"
     }
+  },
+  "rewards": {
+    "function": "gm4_hydromancy:additions/water_chest/opened"
   }
-  
+}

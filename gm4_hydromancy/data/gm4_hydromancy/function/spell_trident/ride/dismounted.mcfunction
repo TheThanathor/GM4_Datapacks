@@ -6,7 +6,7 @@
 # stop spell
 data modify entity @s Motion set value [0.0,0.0,0.0]
 data modify entity @s SoundEvent set value "minecraft:item.trident.hit_ground"
-data modify entity @s Trident.tag.Enchantments set value [{id:"minecraft:loyalty",lvl:3s}]
+data modify entity @s item.components."minecraft:custom_data".Enchantments set value [{id:"minecraft:loyalty",lvl:3s}]
 data modify entity @s damage set value 0
 
 tag @s remove gm4_hy_spell_trident.process

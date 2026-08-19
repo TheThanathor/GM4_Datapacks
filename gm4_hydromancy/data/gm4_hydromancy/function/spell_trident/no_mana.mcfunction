@@ -6,8 +6,8 @@
 # cancel throw
 data modify entity @s Motion set value [0.0,0.0,0.0]
 data modify entity @s damage set value 0.0d
-data modify entity @s Trident.tag.Damage set value 242
-data modify entity @s Trident.tag.Enchantments set value [{id:"minecraft:loyalty",lvl:3s}]
+data modify entity @s item.components."minecraft:custom_data".Damage set value 242
+data modify entity @s item.components."minecraft:custom_data".Enchantments set value [{id:"minecraft:loyalty",lvl:3s}]
 
 # vfx
 playsound block.fire.extinguish player @a[distance=..16] ~ ~ ~ 0.8 0.8
