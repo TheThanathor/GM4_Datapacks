@@ -5,4 +5,4 @@ scoreboard players operation $picked_weight gm4_timelines_data -= $this_weight g
 execute if score $picked_weight gm4_timelines_data matches ..0 run return 1
 
 data remove storage gm4_timelines:temp possible_days[0]
-execute if data storage gm4_timelines:temp possible_days[0] run function gm4_timelines:pick_day/randomize/loop_to_picked_day
+execute if data storage gm4_timelines:temp possible_days[0] run function gm4_timelines:generate_block/technical/loop_to_picked_day

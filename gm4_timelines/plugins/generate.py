@@ -70,12 +70,53 @@ def beet_default(ctx: Context) -> None:
         data_dict = json.load(f)
     timeline = TimelineData(**data_dict)
     
-    timeline = register_days(ctx, timeline)
+    timeline, id_list, day_data = register_days(ctx, timeline)
 
     timeline = remove_null_entries(timeline)
 
+
     # add empty space at the end of the timeline to loop nicer with the datapack
     timeline.period_ticks += DAY_DURATION_TICKS
+
+    # day registry
+    ctx.data["gm4_timelines:register/days"] = Function([
+        "# register days",
+        "# generated from generate.py",
+        "",
+        f'data modify storage gm4_timelines:registry day_data set value {day_data}',
+        f'scoreboard players set $time_markers_start gm4_timelines_data {timeline.period_ticks}'
+    ])
+
+    # add markers for default behaviour
+    default_markers = {
+                "minecraft:day": TimeMarker(
+                    show_in_commands=True,
+                    ticks = timeline.period_ticks
+                ),
+                "minecraft:midnight": TimeMarker(
+                    show_in_commands=True,
+                    ticks = timeline.period_ticks + 1001
+                ),
+                "minecraft:night": TimeMarker(
+                    show_in_commands=True,
+                    ticks = timeline.period_ticks + 2002
+                ),
+                "minecraft:noon": TimeMarker(
+                    show_in_commands=True,
+                    ticks = timeline.period_ticks + 3003
+                )
+            }
+    for marker_name, src_marker in default_markers.items():
+        timeline.time_markers[marker_name] = copy.deepcopy(src_marker)
+    timeline.period_ticks += 4004
+
+    # add the time markers
+    for id in id_list:
+        timeline.time_markers[f"gm4_timelines:{id}"] = TimeMarker(
+            show_in_commands=True,
+            ticks = timeline.period_ticks
+        )
+        timeline.period_ticks += 1001
 
     ctx.data["minecraft:day"] = Timeline(timeline.model_dump())
 
@@ -145,6 +186,7 @@ def process_day_files(
     """
     function_data: dict[str, Any] = {}
     day_list: list[str] = []
+    id_list: list[str] = []
 
     # start with day 0 (first 6000 ticks)
     full_timeline = build_day_zero(default_data)
@@ -158,33 +200,20 @@ def process_day_files(
             day_data_dict = json.load(f)
         day_data = DayData(**day_data_dict)
 
+
+        # add file to markers to add to timeline later
+        id_list.append(file_name)
+
+        # add to a lookup list
+        day_list.append(f'{day_data.settings["in_type"]}'+'[{'+f'id:"{file_name}"'+'}]')
+
         # loop over supported moon phases
         moon_phases = day_data.settings.get("moon_phase", [])
         for moon_phase in moon_phases:
 
             day_build, functions = register_day(default_data, day_data, moon_phase)
 
-            day_start_tick = full_timeline.period_ticks
-            time_markers = {
-                f"gm4_timelines:{file_name}.{moon_phase}.noon": TimeMarker(
-                    show_in_commands=True,
-                    ticks=day_start_tick
-                ),
-                f"gm4_timelines:{file_name}.{moon_phase}.night": TimeMarker(
-                    show_in_commands=True,
-                    ticks=day_start_tick+6000
-                ),
-                f"gm4_timelines:{file_name}.{moon_phase}.midnight": TimeMarker(
-                    show_in_commands=True,
-                    ticks=day_start_tick+13000
-                ),
-                f"gm4_timelines:{file_name}.{moon_phase}.morning": TimeMarker(
-                    show_in_commands=True,
-                    ticks=day_start_tick+18000
-                ),
-            }
-
-            full_timeline = append_to_timeline(full_timeline, day_build, time_markers)
+            full_timeline = append_to_timeline(full_timeline, day_build)
 
             function_moon_phase = function_data.setdefault(moon_phase, {})
             function_entries = function_moon_phase.setdefault(day_data.settings["in_type"], [])
@@ -196,19 +225,18 @@ def process_day_files(
                 "moon_phase": moon_phase,
                 "functions": functions
             })
-            day_list.append(f'{moon_phase}.{day_data.settings["in_type"]}'+'[{'+f'id:"{file_name}"'+'}]')
+
+            # add timeline marker
+            full_timeline.time_markers[f"gm4_timelines:internal.{file_name}.{moon_phase}"] = TimeMarker(
+                show_in_commands=False,
+                ticks = full_timeline.period_ticks
+            )
             full_timeline.period_ticks += day_build.period_ticks
 
     # create function
-    func: dict[str, Any] = {"registry":function_data,"reference_list":day_list}
-    ctx.data["gm4_timelines:register/days"] = Function([
-        "# register days",
-        "# generated from generate.py",
-        "",
-        f'data modify storage gm4_timelines:data day_data set value {func}',
-    ])
+    day_data: dict[str, Any] = {"registry":function_data,"reference_list":day_list}
 
-    return full_timeline
+    return full_timeline, id_list, day_data
 
 
 
@@ -321,7 +349,7 @@ def register_day(
     return result, functions
 
 
-def append_to_timeline(full_timeline: TimelineData, new_data: TimelineData, time_markers: Dict[str, TimeMarker] = {}) -> TimelineData:
+def append_to_timeline(full_timeline: TimelineData, new_data: TimelineData) -> TimelineData:
     """
     Append the next day timeline into the full timeline by offsetting its ticks, they are
     shifted by the current period of the full timeline and then merged into the matching
@@ -353,9 +381,5 @@ def append_to_timeline(full_timeline: TimelineData, new_data: TimelineData, time
             dst_track.keyframes.append(
                 Keyframe(ticks=kf.ticks + offset, value=copy.deepcopy(kf.value))
             )
-
-    # add the time markers
-    for marker_name, src_marker in time_markers.items():
-        full_timeline.time_markers[marker_name] = copy.deepcopy(src_marker)
 
     return full_timeline

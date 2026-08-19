@@ -1,0 +1,59 @@
+{
+    "settings": {
+        "weight": 1,
+        "moon_phase": [
+            "full_moon",
+            "waning_gibbous",
+            "third_quarter",
+            "waning_crescent",
+            "new_moon",
+            "waxing_crescent",
+            "first_quarter",
+            "waxing_gibbous"
+        ],
+        "in_type": "foggy",
+        "out_type": "clear"
+    },
+    "schedule": [
+        {
+            "time": 0,
+            "effects": {
+                "visual/fog_start_distance": 16,
+                "visual/fog_end_distance": 64,
+                "visual/sky_fog_end_distance": 64
+            }
+        },
+        {
+            "time": 6000,
+            "effects": {
+                "visual/fog_start_distance": 8,
+                "visual/fog_end_distance": 16,
+                "visual/sky_fog_end_distance": 16
+            }
+        },
+        {
+            "time": 15000,
+            "effects": {
+                "visual/fog_start_distance": 16,
+                "visual/fog_end_distance": 64,
+                "visual/sky_fog_end_distance": 64
+            }
+        },
+        {
+            "time": 19000,
+            "effects": {
+                "visual/fog_start_distance": 48,
+                "visual/fog_end_distance": 128,
+                "visual/sky_fog_end_distance": 128
+            }
+        },
+        {
+            "time": 23999,
+            "effects": {
+                "visual/fog_start_distance": 64,
+                "visual/fog_end_distance": 512,
+                "visual/sky_fog_end_distance": 512
+            }
+        }
+    ]
+}

@@ -6,6 +6,7 @@ scoreboard objectives add gm4_timelines_data dummy
 scoreboard objectives add gm4_timelines_panel dummy
 
 scoreboard players set #8 gm4_timelines_data 8
+scoreboard players set #1001 gm4_timelines_data 1001
 scoreboard players set #24000 gm4_timelines_data 24000
 
 gamerule advance_weather false
