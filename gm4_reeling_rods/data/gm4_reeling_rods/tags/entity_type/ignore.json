@@ -1,0 +1,13 @@
+{
+  "values": [
+    "minecraft:breeze_wind_charge",
+    "minecraft:command_block_minecart",
+    "minecraft:falling_block",
+    "minecraft:fireball",
+    "minecraft:item",
+    "minecraft:shulker_bullet",
+    "minecraft:spawner_minecart",
+    "minecraft:tnt",
+    "minecraft:wind_charge"
+  ]
+}

@@ -1,0 +1,43 @@
+id: gm4_reeling_rods
+name: Reeling Rods
+version: 1.1.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - generate_files
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_hooked_entity
+
+require:
+  - bolt
+
+meta:
+  gm4:
+    versioning:
+      required:
+        lib_hooked_entity: 1.0.0
+    website:
+      description: Steal Villager's wares, scratch up your foes! Fishing rods have never been more useful!
+      recommended: 
+        - gm4_end_fishing
+        - gm4_live_catch
+      notes: []
+      search_keywords: 
+        - barbed
+        - fishing
+        - enchantment
+    modrinth:
+      project_id: MWPuloVL
+    smithed:
+      pack_id: gm4_reeling_rods
+    planetminecraft:
+      uid: 6733043
+    wiki: https://wiki.gm4.co/wiki/Reeling_Rods
+    credits:
+      Creators:
+        - runcows
+        - Bloo
+      Icon Design:
+        - runcows

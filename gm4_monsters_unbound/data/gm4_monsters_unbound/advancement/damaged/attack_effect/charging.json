@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_charging_attack"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_monsters_unbound:mob/process/attack_effect/charging_attack"
+  }
+}

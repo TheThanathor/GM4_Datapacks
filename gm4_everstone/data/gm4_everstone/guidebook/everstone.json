@@ -19,6 +19,7 @@
         "player": [
           {
             "condition": "minecraft:time_check",
+            "clock": "minecraft:overworld",
             "value": {
               "min": 13000,
               "max": 24000
@@ -47,7 +48,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:zombie"
+          "minecraft:entity_type": "minecraft:zombie"
         }
       }
     },
@@ -55,7 +56,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:skeleton"
+          "minecraft:entity_type": "minecraft:skeleton"
         }
       }
     },
@@ -63,7 +64,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:slime"
+          "minecraft:entity_type": "minecraft:slime"
         }
       }
     },
@@ -71,7 +72,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:stray"
+          "minecraft:entity_type": "minecraft:stray"
         }
       }
     },
@@ -79,7 +80,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:piglin"
+          "minecraft:entity_type": "minecraft:piglin"
         }
       }
     },
@@ -87,7 +88,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:guardian"
+          "minecraft:entity_type": "minecraft:guardian"
         }
       }
     },
@@ -95,7 +96,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:vindicator"
+          "minecraft:entity_type": "minecraft:vindicator"
         }
       }
     }

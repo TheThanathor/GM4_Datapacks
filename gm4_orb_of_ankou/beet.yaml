@@ -1,6 +1,6 @@
 id: gm4_orb_of_ankou
 name: Orb of Ankou
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
@@ -15,16 +15,14 @@ pipeline:
   - gm4_orb_of_ankou.pneuma_model_template
   - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_custom_crafters
   - gm4.plugins.include.lib_player_motion
 
 meta:
   gm4:
     versioning:
       required:
-        gm4_metallurgy: 1.5.0
-        lib_custom_crafters: 3.4.0
-        lib_player_motion: 1.0.0
+        gm4_metallurgy: 1.8.0
+        lib_player_motion: 1.1.0
       schedule_loops:
         - main
         - tick
@@ -34,7 +32,8 @@ meta:
       notes: []
     modrinth:
       project_id: rRP5afZM
-    video: null
+    smithed:
+      pack_id: gm4_orb_of_ankou
     wiki: https://wiki.gm4.co/wiki/Orb_of_Ankou
     credits:
       Creator:

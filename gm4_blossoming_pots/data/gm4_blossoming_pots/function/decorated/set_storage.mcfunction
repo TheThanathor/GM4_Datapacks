@@ -1,5 +1,6 @@
 # Sets command storage for decorated pot plants
-# @s = null
+# @s = unspecified
+# at unspecified
 # run from init
 
 
@@ -123,7 +124,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -138,7 +140,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ],\
     2:[\
@@ -155,7 +158,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -170,7 +174,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -185,7 +190,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ],\
     3:[\
@@ -202,7 +208,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -217,7 +224,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -232,7 +240,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -247,7 +256,163 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
+        }\
+    ]\
+}
+
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike set value {\
+    place_sound:"minecraft:block.sulfur.place",\
+    maximum:3,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"frustum"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.4435f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"tip"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.143f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"middle"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.4435f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"frustum"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.143f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"tip"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.8425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        }\
+    ],\
+    3:[\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"middle"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.4435f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"middle"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.143f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"frustum"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.8425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"tip"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.542f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
         }\
     ]\
 }
@@ -1364,8 +1529,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_saplin
         }\
     ]\
 }
-# mangrove propagule doesn't have another stage for vanilla tweaks, but im adding support now incase VT adds it in the future
-    # lighting bug also affects the default mangrove propagule, so it gets rotated immediately to 0
+
+# lighting bug also affects the default mangrove propagule, so it gets rotated immediately to 0
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_propagule set value {\
     place_sound:"minecraft:item.bone_meal.use",\
     maximum:2,\
@@ -1388,7 +1553,9 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_propag
             block_state:{\
                 Name:"minecraft:mangrove_propagule",\
                 Properties:{\
-                    stage:"1"\
+                    stage:"1",\
+                    age:"4",\
+                    hanging:"false"\
                 }\
             },\
             transformation:{\
@@ -4284,6 +4451,24 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:potato set valu
                 translation:[-0.25f,0.775f,-0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:golden_dandelion set value {\
+    place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:golden_dandelion"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\

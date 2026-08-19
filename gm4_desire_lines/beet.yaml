@@ -1,6 +1,6 @@
 id: gm4_desire_lines
 name: Desire Lines
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -47,6 +47,6 @@ meta:
         - Bloo
         - SpecialBuilder32
         - Misode
-        - Andante
+        - dvitski
       Icon Design:
         - JonPot

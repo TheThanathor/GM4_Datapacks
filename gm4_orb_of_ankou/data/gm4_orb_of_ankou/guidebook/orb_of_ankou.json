@@ -29,8 +29,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type_specific": {
-                "type": "player",
+              "minecraft:type_specific/player": {
                 "advancements": {
                   "gm4:create_soul_forge": true
                 }
@@ -456,6 +455,26 @@
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.blasting",
                   "fallback": "Shoots fireballs when shooting a crossbow with blaze powder in the inventory"
+                }
+              ]
+            }
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.orb_of_ankou.pneuma_list",
+            "fallback": " - %1$s*",
+            "with": [
+              {
+                "translate": "text.gm4.pneuma_debilitate",
+                "fallback": "Debilitate"
+              }
+            ],
+            "hover_event": {
+              "action": "show_text",
+              "value": [
+                {
+                  "translate": "text.gm4.guidebook.orb_of_ankou.note.debilitate",
+                  "fallback": "Applies Weakness to arrows shot from bows"
                 }
               ]
             }

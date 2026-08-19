@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '1.21.5'
+  VERSION: '26.2'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
 
 jobs:
@@ -30,10 +30,7 @@ jobs:
         run: git fetch origin ${{ github.base_ref }}
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v3
-        with:
-          version: '0.5.4'
-          enable-cache: true
+        uses: astral-sh/setup-uv@v7
 
       - name: Build and publish all modules
         if: github.event_name != 'pull_request'
@@ -89,20 +86,18 @@ jobs:
           # https://fabricmc.net/use/server/
           # https://modrinth.com/mod/fabric-api/versions
           # https://modrinth.com/mod/packtest/versions
-          - version: '1.21.5'
-            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.5/0.16.13/1.0.3/server/jar
-            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/FZ4q3wQK/fabric-api-0.119.9%2B1.21.5.jar
-            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/Swh7th09/packtest-2.1-mc1.21.5.jar
+          - version: '26.2'
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/26.2-rc-2/0.19.3/1.1.1/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/Fsy077WD/fabric-api-0.152.0%2B26.2.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/qT2wdJhc/packtest-2.6.0-beta1.jar
+            command_limit_tracer_url: https://cdn.modrinth.com/data/Ao12dSbt/versions/zKvlVzlN/commandlimittracer-0.3.0.jar
     name: 'test-${{ matrix.version }}'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v3
-        with:
-          version: '0.5.4'
-          enable-cache: true
+        uses: astral-sh/setup-uv@v7
 
       - name: Build all modules for tests
         run: uv run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
@@ -113,7 +108,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '25'
 
       - name: Download server files
         run: |
@@ -121,11 +116,11 @@ jobs:
           mkdir mods
           curl -o mods/fabric-api.jar ${{ matrix.fabric_api_url }}
           curl -o mods/packtest.jar ${{ matrix.packtest_url }}
+          curl -o mods/command_limit_tracer.jar ${{ matrix.command_limit_tracer_url }}
 
       - name: Copy packs to world
         run: |
           mkdir -p world/datapacks
-          rm out/gm4_zauber_cauldrons.zip
           rm out/gm4_zauber_liquids.zip
           cp out/gm4_*.zip world/datapacks
 

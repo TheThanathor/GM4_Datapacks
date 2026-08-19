@@ -29,7 +29,9 @@ def generate_corripio(ctx: Context):
               {
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
-                "predicate": { "type": f"minecraft:{entity}" }
+                "predicate": {
+                  "minecraft:entity_type": f"minecraft:{entity}"
+                }
               },
               *[{
                 "condition": "minecraft:inverted",
@@ -37,7 +39,11 @@ def generate_corripio(ctx: Context):
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"" + tag + "\"]}"
+                    "minecraft:entity_tags": {
+                      "all_of": [
+                        tag
+                      ]
+                    }
                   }
                 }
               } for tag in ["gm4_oa_ignore", "smithed.entity"]],
@@ -144,20 +150,21 @@ def generate_soul_essence_loot_tables(ctx: Context):
                 },
                 {
                   "function": "minecraft:set_name",
+                  "target": "item_name",
                   "name": {
                     "translate": "item.gm4.soul_essence",
-                    "fallback": "Soul Essence",
-                    "italic": False,
-                    "color": "white"
+                    "fallback": "Soul Essence"
                   }
                 },
                 {
                   "function": "minecraft:set_components",
                   "components": {
                     "minecraft:enchantment_glint_override": True,
-                    "minecraft:custom_model_data": f"pneuma/{pneuma}",
+                    "minecraft:custom_model_data": {
+                      "strings": [f"gm4_orb_of_ankou:pneuma/{pneuma}"]
+                    },
                     "minecraft:damage_resistant": {
-                        "types": "#minecraft:is_fire"
+                      "types": "#minecraft:is_fire"
                     },
                   }
                 },
